@@ -23,6 +23,7 @@ namespace SignalRCore.API.Controllers
         [HttpGet("{teamCount}")]
         public async Task<IActionResult> SetTeamCount(int teamCount)
         {
+            AppHub.TeamCount = teamCount;
             await _hubContext.Clients.All.SendAsync("Notify", $"All of team {teamCount}");
 
             return Ok();
