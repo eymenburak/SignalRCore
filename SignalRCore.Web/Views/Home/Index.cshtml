@@ -28,6 +28,10 @@
             }
 
             statusShow();
+        
+            connection.on("Error", (err) => {
+                alert(err);
+            })
 
             connection.onreconnecting(err => {
                 $("#loading").show();
@@ -64,6 +68,9 @@
             connection.on("ReceiveName", (name) => {
                 $("#namesList").append(`<li class="list-group-item"> ${name} </li>`)
             })
+
+
+
 
         })
        
