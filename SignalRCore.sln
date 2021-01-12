@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRCore.API", "SignalRCore.API\SignalRCore.API.csproj", "{658950C7-E38D-4681-9948-CB2535E01368}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRCore.Web", "SignalRCore.Web\SignalRCore.Web.csproj", "{859C2372-70A0-44F2-9ACD-E9262BCE295A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRCore.Web", "SignalRCore.Web\SignalRCore.Web.csproj", "{859C2372-70A0-44F2-9ACD-E9262BCE295A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid.API", "Covid.API\Covid.API.csproj", "{E50F6CE9-39D9-4E85-A7D0-E14C99AAED16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{859C2372-70A0-44F2-9ACD-E9262BCE295A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{859C2372-70A0-44F2-9ACD-E9262BCE295A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{859C2372-70A0-44F2-9ACD-E9262BCE295A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E50F6CE9-39D9-4E85-A7D0-E14C99AAED16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E50F6CE9-39D9-4E85-A7D0-E14C99AAED16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E50F6CE9-39D9-4E85-A7D0-E14C99AAED16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E50F6CE9-39D9-4E85-A7D0-E14C99AAED16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
