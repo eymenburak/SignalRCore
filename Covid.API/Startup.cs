@@ -32,6 +32,15 @@ namespace Covid.API
             {
                 options.UseSqlServer(Configuration["ConStr"]);
             });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder =>
+                {
+                    builder.WithOrigins("https://localhost:44375").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+                });
+
+            });
             services.AddControllers();
             services.AddSignalR();
             services.AddScoped<CovidService>();
@@ -48,7 +57,7 @@ namespace Covid.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors("CorsPolicy");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
