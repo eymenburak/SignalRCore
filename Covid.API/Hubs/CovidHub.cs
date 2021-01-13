@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.SignalR; 
+﻿using Covid.API.Models;
+using Microsoft.AspNetCore.SignalR; 
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,14 @@ namespace Covid.API.Hubs
 {
     public class CovidHub : Hub
     {
+        private readonly CovidService _service;
+        public CovidHub(CovidService service)
+        {
+            _service = service;
+        }
         public async Task GetCovidList()
         {
-            await Clients.All.SendAsync("ReceiveCovidList", "Get Covid19 datas");
+            await Clients.All.SendAsync("ReceiveCovidList", _service.GetCovidChartList());
         }
     }
 }

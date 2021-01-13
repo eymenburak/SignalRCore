@@ -12,6 +12,6 @@ namespace Covid.API.Models
         {
 
         }
-        public DbSet<Covid> Covids { get; set; }
+        public DbSet<Covid19> Covid19s { get; set; }
     }
 }

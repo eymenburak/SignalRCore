@@ -13,7 +13,7 @@ namespace Covid.API.Models
         Konya=4,
         Antalya=5
     }
-    public class Covid
+    public class Covid19
     {
         public int Id { get; set; }
         public ECity City { get; set; }
